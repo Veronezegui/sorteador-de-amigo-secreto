@@ -1,0 +1,80 @@
+.headerContainer {
+    min-width: 100vw;
+    height: 454px;
+    display: flex;
+    background: #4B69FD;
+    justify-content: center;
+    border: 2px solid black;
+
+    @media screen and (max-width: 930px) {
+        height: 384px;
+    }
+
+    .content {
+        padding: 10px;
+        max-width: 80%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex: 1;
+        gap: 30px;
+
+        @media screen and (max-width: 930px) {
+            flex-direction: column;
+        }
+
+        .logoContainer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 50%;
+            height: 100%;
+
+            @media screen and (max-width: 930px) {
+                justify-content: center;
+            }
+
+            .logo {
+
+                @media screen and (max-width: 930px) {
+                    display: none;
+                }
+            }
+
+            .logo-pequeno {
+                display: none;
+
+                @media screen and (max-width: 930px) {
+                    display: block;
+                    padding-top: 10px;
+                }
+            }
+        }
+
+        .participantContainer {
+            display: flex;
+            height: 100%;
+            flex: 50%;
+            position: relative;
+            
+            @media screen and (max-width: 930px) {
+                justify-content: center;
+            }
+
+            .participant {
+                position: absolute;
+                bottom: -22px;
+                max-width: 450px;
+                max-height: 277px;
+
+                @media screen and (max-width: 930px) {
+                    width: 328px;
+                    height: 190px;
+                    bottom: -10px;
+                }
+            }
+        }
+    }
+
+}
