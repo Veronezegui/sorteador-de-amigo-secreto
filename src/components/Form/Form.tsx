@@ -22,15 +22,17 @@ export function Form() {
     return (
         <>
             <form onSubmit={addParticipant}>
-                <input
-                    className="input"
-                    ref={inputRef}
-                    type="text"
-                    placeholder="Insira os nomes dos participantes"
-                    value={name}
-                    onChange={event => setName(event.target.value)}
-                />
-                <button disabled={!name} className="button">Adicionar</button>
+                <div className="formContent">
+                    <input
+                        className="input"
+                        ref={inputRef}
+                        type="text"
+                        placeholder="Insira os nomes dos participantes"
+                        value={name}
+                        onChange={event => setName(event.target.value)}
+                    />
+                    <button disabled={!name} className="button">Adicionar</button>
+                </div>
                 {errorMessage && <p className="error" role="alert">{errorMessage}</p>}
             </form>
         </>

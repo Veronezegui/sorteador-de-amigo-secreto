@@ -10,6 +10,13 @@ jest.mock('../../state/hooks/useParticipantsList', () => {
 })
 
 const mockNavegation = jest.fn()
+const mockPrizeDraw = jest.fn()
+
+jest.mock('../../state/hooks/usePrizeDraw', () => {
+    return {
+        usePrizeDraw: () => mockPrizeDraw
+    }
+})
 
 jest.mock('react-router-dom', () => {
     return {
@@ -39,7 +46,7 @@ describe("when suficient participants", () => {
         (useParticipantsList as jest.Mock).mockReturnValue(["Ana", "Pedro", "Raúl"])
     })
 
-    it("should be able to start", () => {
+    it("should start the raffle", () => {
         render(
             <RecoilRoot>
                 <Footer />
@@ -61,5 +68,6 @@ describe("when suficient participants", () => {
         fireEvent.click(button)
         expect(mockNavegation).toHaveBeenCalledTimes(1)
         expect(mockNavegation).toHaveBeenCalledWith("/prizeDraw")
+        expect(mockPrizeDraw).toHaveBeenCalledTimes(1)
     })
 })

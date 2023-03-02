@@ -2,6 +2,7 @@ import { useParticipantsList } from "../../state/hooks/useParticipantsList";
 import { useNavigate } from "react-router-dom";
 import "./style.scss";
 import { Icon } from "@iconify/react"
+import { usePrizeDraw } from "../../state/hooks/usePrizeDraw";
 
 export function Footer() {
 
@@ -9,7 +10,10 @@ export function Footer() {
 
     const navigate = useNavigate()
 
+    const raffle = usePrizeDraw()
+
     const start = () => {
+        raffle()
         navigate("/prizeDraw")
     }
 

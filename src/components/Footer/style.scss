@@ -5,6 +5,7 @@ footer {
     gap: 180px;
 
     @media screen and (max-width: 825px) {
+        max-width: 100%;
         flex-direction: column;
         gap: 90px;
     }
@@ -26,5 +27,9 @@ footer {
         border-radius: 37.5px;
         color: #FFF;
         font-size: 20px;
+
+        @media screen and (max-width: 825px) {
+            max-width: 90%;
+        }
     }
 }
