@@ -36,15 +36,19 @@ describe("On prize draw page", () => {
         (useRaffleResult as jest.Mock).mockReturnValue(result)
     })
 
-    it("should be able to show all secret friends", () => {
+    it("should be able to show all friends", () => {
         render(
             <RecoilRoot>
                 <PrizeDrawPage />
             </RecoilRoot>
         )
 
+        const select = screen.getByRole("listbox")
+        fireEvent.click(select)
+
         const options = screen.queryAllByRole('option')
-        expect(options).toHaveLength(3)
+
+        expect(options).toHaveLength(participants.length)
     })
 
     it("should render the secret friend", () => {
@@ -54,13 +58,11 @@ describe("On prize draw page", () => {
             </RecoilRoot>
         )
 
-        const select = screen.getByPlaceholderText("Selecione o seu nome")
+        const select = screen.getByRole("listbox")
+        fireEvent.click(select)
 
-        fireEvent.change(select, {
-            target: {
-                value: participants[0]
-            }
-        })
+        const option = screen.getByText("Ana")
+        fireEvent.click(option)
 
         const button = screen.getByRole("button")
         fireEvent.click(button)

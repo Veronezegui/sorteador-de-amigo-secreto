@@ -14,6 +14,10 @@ footer {
         background: hsla(230, 98%, 64%, 0.99);
     }
 
+    button:disabled {
+        filter: brightness(80%);
+    }
+
     .start {
         display: flex;
         justify-content: center;
