@@ -23,6 +23,7 @@
 ## 💻 Sobre o projeto
 
 Sorteador de amigo secreto - é uma aplicação desenvolvida em React.js com Typescript. Trata-se de uma página que permite o usuário cadastrar todos os participantes de uma brincadeira de amigo secreto e então realizar o sorteio entre eles. O interessante desse projeto é que ele foi desenvolvido utilizando o TDD (Test Driven Development), ou seja, desenvolvimento orientado por testes, todos os componentens e funcionalidades foram codificados apartir da criação de testes unitários.
+
 ---
 
 ## 🎨 Layout
