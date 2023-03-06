@@ -55,7 +55,7 @@ Além disto é bom ter um editor para trabalhar com o código como o [VSCode](ht
 ```bash
 
 # Clone este repositório
-$ git clone https://github.com/Veronezegui/MKS-Front-end-challenge.git
+$ git clone https://github.com/Veronezegui/sorteador-de-amigo-secreto.git
 
 # Instale as dependências web
 $ npm install

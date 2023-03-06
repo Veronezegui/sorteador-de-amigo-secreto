@@ -4,6 +4,7 @@ import { RecoilRoot } from "recoil";
 import { PrizeDrawPage } from "./pages/PrizeDrawPage";
 import { StartingPage } from "./pages/StartingPage";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     path: "/prizeDraw",
     element: <PrizeDrawPage />
   }
-])
+]);
 
 function App() {
   return (

@@ -30,7 +30,12 @@ export function PrizeDrawPage() {
                 <Title text="Quem vai tirar o papelzinho?" />
                 <form onSubmit={raffle}>
                     <div className="container-select" >
-                        <div className="select" onClick={() => setIsOpen(!isOpen)} role="listbox">
+                        <div className="select"
+                            onClick={() => {
+                                setIsOpen(!isOpen);
+                                setSecretFriend("");
+                            }}
+                            role="listbox">
                             {selectedParticipant ? <p>{selectedParticipant}</p> : <p>Selecione o seu nome</p>}
                         </div>
                         {isOpen ? (
@@ -46,8 +51,6 @@ export function PrizeDrawPage() {
                             <></>
                         )}
                     </div>
-
-
                     <p className="description">Clique em sortear para ver quem é seu amigo secreto!</p>
                     <button className="start">
                         <Icon icon="mdi:dice-5" fontSize={32} />

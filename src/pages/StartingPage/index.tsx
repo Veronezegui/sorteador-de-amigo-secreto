@@ -17,9 +17,5 @@ export function StartingPage() {
                 <Footer />
             </Card>
         </>
-
-
-
     )
-
 }
