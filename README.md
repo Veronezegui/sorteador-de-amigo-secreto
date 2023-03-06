@@ -30,13 +30,13 @@ Sorteador de amigo secreto - é uma aplicação desenvolvida em React.js com Typ
 
 <p align="center">
 
-  <img alt="Visual" title="#Visual" src="./layout.png" width="800px" style="margin-top: 30px;">
+  <img alt="Visual" title="#Visual" src="./sorteador-de-amigo-secreto-1.png" width="800px" style="margin-top: 30px;">
 
 </p>
 
 <p align="center">
 
-  <img alt="Visual" title="#Visual" src="./layout2.png" width="800px" style="margin-top: 30px;">
+  <img alt="Visual" title="#Visual" src="./sorteador-de-amigo-secreto-2.png" width="800px" style="margin-top: 30px;">
 
 </p>
 
